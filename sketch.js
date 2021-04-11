@@ -7,14 +7,23 @@ trackImg=loadImage('images/track.jpg');
 
 function setup(){
     createCanvas(1000,1000);
-    car=createSprite(700,500);
-    car.addImage(carImg);
+   track=createSprite(700,1000);
+   track.addImage(trackImg);
 
-    track=createSprite(700,1000);
-    track.addImage(trackImg)
+   car=createSprite(700,900);
+    car.addImage(carImg);
 
 }
 
 function draw(){
+
+    car.velocityY=0;
+
+   if(keyDown(UP_ARROW)){
+       car.velocityY=10;
+    camera.position.x = 1000-20;
+    camera.position.y = car.y;
+   }
+
     drawSprites();
 }
