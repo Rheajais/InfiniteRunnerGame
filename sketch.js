@@ -21,7 +21,7 @@ function draw(){
 
    if(keyDown(UP_ARROW)){
        car.velocityY=10;
-    camera.position.x = 1000-20;
+    camera.position.x = 500;
     camera.position.y = car.y;
    }
 
