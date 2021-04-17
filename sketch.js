@@ -20,10 +20,17 @@ function draw(){
     car.velocityY=0;
 
    if(keyDown(UP_ARROW)){
-       car.velocityY=10;
+       car.velocityY=-10;
     camera.position.x = 500;
     camera.position.y = car.y;
    }
+
+   if(car.distance > 1000){
+    gameState = 2;
+    car.velocityY=0;
+    textSize(20);
+    text("Game Ended!");
+  }
 
     drawSprites();
 }
